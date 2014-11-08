@@ -71,5 +71,7 @@ Write a query to find the state with the highest total amount paid, conditional 
 Write a query to find the number of each item sold per state. Order the results by item, and secondarily by state.
   Select sum(quantity), state, item from items_ordered inner join customers on items_ordered.customerid = customers.customerid group by item, state order by item, state;
 
+Return prices rounded to the nearest 10 (so 10, 20, 30, etc.)
+  Select round(price/10) from items_ordered;
 
 
